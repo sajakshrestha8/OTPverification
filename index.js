@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  return res.send("API is working");
+});
+
 app.post("/verify", (req, res) => {
   const { code } = req.body;
 
