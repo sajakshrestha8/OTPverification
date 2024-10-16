@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 app.post("/verify", (req, res) => {
   const { code } = req.body;
 
-  if (!code || code.length !== 6 || code[5] === "7") {
+  if (!code || code.length !== 6 || code[5] === 7) {
     return res.status(400).json({ message: "Invalid code" });
   }
 
